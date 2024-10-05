@@ -1,0 +1,256 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+*{
+    text-decoration: none;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Changed from overflow-y to overflow */
+    height: 100%; /* Ensure the body takes up the full viewport height */
+}
+
+.navbar{
+    background-color: rgb(255, 255, 255); 
+    font-family: SF Pro Display;
+    padding: 0 15px; /* Changed from padding-right and padding-left */
+    width: 100%;
+    height: 80px; /* Set an explicit height matching the one subtracted in .container */
+    box-sizing: border-box; /* Add this line */
+}
+
+.navdiv{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    
+}
+
+li a{
+    color: #333333;  /* Darker color, adjust as needed */
+    font-size: 18px;
+    margin-right: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 24px;  /* Adjust size as needed */
+    height: 24px;
+    vertical-align: middle;
+    filter: brightness(0.6);  /* Darkens the icon, adjust value as needed */
+}
+
+.logo-img{
+    width: 140px;
+    height: 80px;
+    object-fit:fill;
+    
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#time-display {
+    color: #7d7d7d;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 24px; /* Match the height of the icons */
+    margin-right: 40px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+li a {
+    color: #333333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Use full viewport height */
+    overflow: hidden;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    overflow: hidden;
+    padding-right: 10%; /* Add padding to the right side */
+}
+
+.right-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 370px; /* Maintain the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    margin-bottom: 70px; /* Ensure the entire image is visible */
+}
+
+h1 {
+    font-size: 3rem;
+    
+    color: #333;
+    font-weight: 500; /* Adjust this value as needed */
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5rem;
+    max-width: 15em; /* Adjust this value to control where the line break occurs */
+    margin-top: 0.4em;;
+    
+}
+
+.action-area {
+    display: flex;
+    flex-direction: row; /* Change to row to align items horizontally */
+    gap: 1rem;
+    max-width: 600px; /* Increased to accommodate the join button */
+}
+
+.new-meeting-btn {
+    padding: 1px 20px;
+    font-size: 1rem;
+    background-color: #2868C8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Increased from 8px to 12px */
+}
+
+.new-meeting-btn:hover {
+    background-color: #0056b3;
+}
+
+.meeting-input {
+    padding: 12px 12px 12px 40px; /* Increased left padding to make room for the icon */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded corners only on the left side */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Optional: Style the placeholder text */
+.meeting-input::placeholder {
+    color: #999;
+}
+
+.input-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 275px; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* This ensures the icon doesn't interfere with input interactions */
+}
+
+.join-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: white;
+    color: #2868C8;
+    border: none;
+    border-left: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.join-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section, .right-section {
+        flex: none;
+        height: 50vh;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
+.separator {
+    width: 100%;
+    max-width: 500px; /* Match this with the max-width of .action-area */
+    height: 1px;
+    background-color: #e0e0e0; /* Light grey color, adjust as needed */
+    margin-top: 2rem; /* Adjust spacing as needed */
+}
+
+.btn-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
