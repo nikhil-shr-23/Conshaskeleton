@@ -103,6 +103,7 @@ li a {
     flex-direction: column;
     justify-content: center;
     padding: 0 8%;
+    margin-bottom: 120px;
 }
 
 .right-section {
@@ -111,19 +112,19 @@ li a {
     justify-content: flex-end; /* Align to the right */
     align-items: center;
     overflow: hidden;
-    padding-right: 10%; /* Add padding to the right side */
+    padding-right: 15%; /* Add padding to the right side */
 }
 
 .right-image {
     width: 100%; /* Make the image responsive */
-    max-width: 370px; /* Maintain the maximum width */
+    max-width: 400px; /* Maintain the maximum width */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain;
-    margin-bottom: 70px; /* Ensure the entire image is visible */
+    margin-bottom: 120px; /* Ensure the entire image is visible */
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     
     color: #333;
     font-weight: 500; /* Adjust this value as needed */
